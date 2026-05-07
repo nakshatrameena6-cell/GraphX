@@ -1,10 +1,8 @@
-import Graph from "@/components/Graph";
-
 export default function Home() {
   return (
     <main>
-      <Graph />
+      <h1>GraphX</h1>
+      <p>My project is live 🚀</p>
     </main>
   );
 }
-
