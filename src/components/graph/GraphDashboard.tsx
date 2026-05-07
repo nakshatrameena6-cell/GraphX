@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useMemo, useRef } from 'react';
 import { GlassPanel, NeonButton } from '@/components/ui/CyberUI';
 import EquationInput from '@/components/math/EquationInput';

@@ -3,11 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { GlassPanel } from '@/components/ui/CyberUI';
 import 'katex/dist/katex.min.css';
-import { InlineMath, BlockMath } from 'react-katex';
+import KaTeX from '@/components/ui/KaTeX';
 import * as math from 'mathjs';
-
-// react-katex is sometimes tricky with types, if it fails I'll use raw katex
-// But for now let's assume it works or I'll use a simple wrapper.
 
 interface MathSolverProps {
   equation: string;
@@ -46,16 +43,20 @@ export default function MathSolver({ equation }: MathSolverProps) {
       <div className="space-y-6">
         <div>
           <p className="text-zinc-500 text-xs uppercase mb-2 font-mono">Rendered Function</p>
-          <div className="bg-white/5 p-4 rounded-xl flex justify-center items-center overflow-x-auto">
-             <BlockMath math={`y = ${latex}`} />
+          <div className="bg-white/5 p-4 rounded-xl flex justify-center items-center overflow-x-auto min-h-[60px]">
+             <div className="text-xl">
+               <KaTeX math={`y = ${latex}`} block />
+             </div>
           </div>
         </div>
 
         {derivative && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <p className="text-zinc-500 text-xs uppercase mb-2 font-mono">First Derivative (dy/dx)</p>
-            <div className="bg-cyber-purple/5 p-4 rounded-xl border border-cyber-purple/10 flex justify-center items-center overflow-x-auto">
-               <BlockMath math={`\\frac{dy}{dx} = ${derivative}`} />
+            <div className="bg-cyber-purple/5 p-4 rounded-xl border border-cyber-purple/10 flex justify-center items-center overflow-x-auto min-h-[60px]">
+               <div className="text-lg">
+                 <KaTeX math={`\\frac{dy}{dx} = ${derivative}`} block />
+               </div>
             </div>
           </div>
         )}
