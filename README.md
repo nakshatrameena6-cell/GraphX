@@ -1,3 +1,8 @@
+Graph Solver & Visualizer
+
+A simple project that plots graphs from user-given equations and solves basic graph-related mathematical equations. It helps visualize functions, understand graph behavior, and perform quick equation solving in an interactive way.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
