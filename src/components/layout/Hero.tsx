@@ -47,9 +47,6 @@ export default function Hero() {
           <NeonButton variant="yellow" size="lg">
             Initialize App
           </NeonButton>
-          <NeonButton variant="purple" size="lg">
-            Documentation
-          </NeonButton>
         </motion.div>
       </div>
 

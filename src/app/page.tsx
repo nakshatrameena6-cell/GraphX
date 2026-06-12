@@ -14,11 +14,11 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Dashboard Section */}
-      <GraphDashboard />
-
       {/* Interactive Math Quotes Banner */}
       <MathQuotes />
+
+      {/* Dashboard Section */}
+      <GraphDashboard />
 
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 relative z-10">
